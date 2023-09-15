@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KPI_DataB" Class="DbConnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Function Name="dbo.rpt_kpiWithOrgCode" Method="rpt_kpiWithOrgCode">
+    <ElementType Name="rpt_kpiWithOrgCodeResult">
+      <Column Name="OrgLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrgCode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OrgName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="YYYY" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MM" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KPICode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIBullet" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPILink" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UnitDivider" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasValue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsCountryLevel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TargetMonth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ActualMonth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NoOfDecimalTarget" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoOfDecimalActual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MeasureType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrgOwnerCode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OrgOwner" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Officer" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinalScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StatusColor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastDataDate" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spKPIGetData_from_AStaff" Method="spKPIGetData_from_AStaff">
+    <Parameter Name="YYYY" Parameter="yYYY" Type="System.String" DbType="NVarChar(4)" />
+    <Parameter Name="MM" Parameter="mM" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="ORGCODE" Parameter="oRGCODE" Type="System.String" DbType="NVarChar(4)" />
+    <ElementType Name="spKPIGetData_from_AStaffResult">
+      <Column Name="OrgLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrgCode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OrgName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="YYYY" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MM" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KPICode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIBullet" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPIName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="KPILink" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UnitDivider" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HasValue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsCountryLevel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TargetMonth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ActualMonth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NoOfDecimalTarget" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoOfDecimalActual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MeasureType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrgOwnerCode" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OrgOwner" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Officer" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinalScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StatusColor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastDataDate" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
